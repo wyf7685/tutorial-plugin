@@ -78,7 +78,7 @@ end
 
 function string_formatter(str, variables)
     return str:gsub("%${(.-)}", function(var)
-        return variables[var] or "${" .. var .. "}"
+        return variables[var] or ("${" .. var .. "}")
     end)
 end
 
